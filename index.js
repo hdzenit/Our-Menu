@@ -4,7 +4,7 @@ const menu = [
         title: "buttermilk pancakes",
         category: "breakfast",
         price: 15.99,
-        img: "./images/item-1.jpg",
+        img: "./images/1.jpg",
         desc: `I'm baby woke mlkshk wolf bitters live-edge blue,hammock freegan copper mug whatever cold-pressed`,
     },
     {
@@ -66,23 +66,25 @@ const menu = [
 ];
 
 const sectionCenter = document.querySelector('.section-center');
-const filterBtn = document.querySelectorAll('.filter-btn');
+const container = document.querySelector('.btn-container');
+
 
 //load items
-window.addEventListener('DOMContentLoaded', function(){
-displayMenuItems(menu);
-//ovdje sam stao 3:04:56
-const categories = menu.reduce(function(values,item){
-    if(!values.includes(item.category){
-        values.push(item.category);
-    }
-return values;
-
-},
-['all']);
-});
-console.log(categories);
-});
+window.addEventListener('DOMContentLoaded', function() {
+    displayMenuItems(menu);
+    const categories = menu.reduce(
+        function(values, item) {
+        if (!values.includes(item.category)) {
+            values.push(item.category);
+         }
+    return values;
+    },['all']);
+    const categoryBtns = categories.map(function(category){
+       return `<button class="filter-btn" type="button" data-id="${category}">${category}</button>` 
+    }).join("");
+    container.innerHTML = categoryBtns;
+    const filterBtn = container.querySelectorAll('.filter-btn');
+    });
 //filter items
 filterBtn.forEach(function(btn){
     btn.addEventListener('click', function(e){
@@ -123,7 +125,6 @@ function displayMenuItems(menuItems) {
      </article>`;
 });
 displayMenu = displayMenu.join("");
-console.log(displayMenu);
-
 sectionCenter.innerHTML = displayMenu;
+
 };

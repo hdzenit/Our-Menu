@@ -66,10 +66,45 @@ const menu = [
 ];
 
 const sectionCenter = document.querySelector('.section-center');
+const filterBtn = document.querySelectorAll('.filter-btn');
 
+//load items
 window.addEventListener('DOMContentLoaded', function(){
 displayMenuItems(menu);
+//ovdje sam stao 3:04:56
+const categories = menu.reduce(function(values,item){
+    if(!values.includes(item.category){
+        values.push(item.category);
+    }
+return values;
+
+},
+['all']);
 });
+console.log(categories);
+});
+//filter items
+filterBtn.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+const category = e.currentTarget.dataset.id;
+const menuCategory = menu.filter(function(menuItem){
+    //console.log(menuItem.category);
+    if (menuItem.category === category) {
+        return menuItem;
+    }
+    
+});
+//console.log(menuCategory);
+if (category === 'all'){
+    displayMenuItems(menu);
+}else {
+    displayMenuItems(menuCategory);
+}
+});
+});
+
+
+
 
 function displayMenuItems(menuItems) {
     let displayMenu = menuItems.map(function(item){

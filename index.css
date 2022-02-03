@@ -8,11 +8,48 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
     margin: 5%;
 }
 
+h2 {
+    text-align: center;
+    font-size: 35px;
+}
+.btn-container {
+    text-align: center;
+    padding: 5%;
+    margin: 3%;
+}
+
+.btn-container > button {
+    font-size: 16px;
+    background-color: white;
+    padding: 10px 25px;
+    margin: 10px;
+    border-radius: 15px;
+    border-color: rgba(180, 146, 52);
+    color: rgba(180, 146, 52);;
+}
+
 .section-center {
+    position: relative;
     column-count: 2;
     margin: 5%;
+
 }
+
+.price {
+    color: rgba(180, 146, 52);;
+}
+
+img{
+border: 3px solid rgba(180, 146, 52);
+border-radius: 5px;
+width: 350px;
+height: 250px;
+float: inline-start;
+
+}
+
 

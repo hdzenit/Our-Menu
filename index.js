@@ -63,6 +63,14 @@ const menu = [
         img: "./images/8.jpg",
         desc: `I'm baby woke mlkshk wolf bitters live-edge blue,hammock freegan copper mug whatever cold-pressed`,
     },
+    {
+        id: 9,
+        title: "Steak Dinner",
+        category: "Dinner",
+        price: 16.99,
+        img: "./images/9.jpeg",
+        desc: `Skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+    }
 ];
 
 const sectionCenter = document.querySelector('.section-center');

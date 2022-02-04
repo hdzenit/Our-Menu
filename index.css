@@ -24,7 +24,9 @@ header{
 h2 {
     text-align: center;
     font-size: 35px;
-    margin-bottom: 5%;
+    margin: 50px 650px;
+    border-bottom: 5px solid rgba(180, 146, 52);
+    padding-bottom: 3%;
 }
 
 .btn-container {
@@ -61,22 +63,23 @@ button:active{
 h4 {
     box-sizing: border-box;
     display: inline;
-    margin-left: 0%;
     font-size: 22px;
+    margin: 0;
 }
 
 .price {
     font-size: 22px;
-    display: flex;
+    display: inline;
     float: right;
     color: rgba(180, 146, 52);
 }
 
 .item-info {
-    
+    box-sizing: border-box;
     width: 350px;
     height: 150px;
     float: right;
+    margin-left: 5px;
 }
 
 .item-text {
